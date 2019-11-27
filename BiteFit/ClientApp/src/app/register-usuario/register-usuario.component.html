@@ -1,6 +1,6 @@
 <body>
   <div class="container-fluid">
-    <form>
+    <form role="form" [formGroup]="formGroup" novalidate>
       <div class="row">
         <div class="col-md-12">
           <div class="row">
@@ -8,13 +8,13 @@
               <label for="emailId">
                 Email
               </label>
-              <input type="email" id="emailId" class="form-control" placeholder="Enter Email">
+              <input type="email" id="emailId" class="form-control" placeholder="Enter Email" formControlName="email">
             </div>
             <div class="col-md-6">
               <label for="usernameId">
                 Username
               </label>
-              <input type="text" id="usernameId" class="form-control" placeholder="Enter Username">
+              <input type="text" id="usernameId" class="form-control" placeholder="Enter Username" formControlName="username">
             </div>
           </div>
           <div class="row">
@@ -22,7 +22,7 @@
               <label for="passwordId">
                 Password
               </label>
-              <input type="password" id="passwordId" class="form-control" placeholder="Enter Password">
+              <input type="password" id="passwordId" class="form-control" placeholder="Enter Password" formControlName="password">
             </div>
             <div class="col-md-6">
               <label for="repeatPasswordId">
@@ -36,19 +36,19 @@
               <label for="nombreId">
                 Nombre
               </label>
-              <input type="text" id="nombreId" class="form-control" placeholder="Enter Name">
+              <input type="text" id="nombreId" class="form-control" placeholder="Enter Name" formControlName="nombre">
             </div>
             <div class="col-md-4">
               <label for="apellidoPaternoId">
                 Apellido Paterno
               </label>
-              <input type="text" id="apellidoPaternoId" class="form-control" placeholder="Enter Apellido Paterno">
+              <input type="text" id="apellidoPaternoId" class="form-control" placeholder="Enter Apellido Paterno" formControlName="apellidoPaterno">
             </div>
             <div class="col-md-4">
               <label for="apellidoMaternoId">
                 Apellido Materno
               </label>
-              <input type="text" id="apellidoMaternoId" class="form-control" placeholder="Enter Apellido Materno">
+              <input type="text" id="apellidoMaternoId" class="form-control" placeholder="Enter Apellido Materno" formControlName="apellidoMaterno">
             </div>
           </div>
           <div class="row">
@@ -61,10 +61,10 @@
                 </div>
                 <div class="col-md-6">
                   <div class="radio">
-                    <label><input type="radio" name="genero">Masculino</label>
+                    <label><input type="radio" value="1" formControlName="genero">Masculino</label>
                   </div>
                   <div class="radio disabled">
-                    <label><input type="radio" name="genero">Femenino</label>
+                    <label><input type="radio" value="0" formControlName="genero">Femenino</label>
                   </div>
                 </div>
               </div>
@@ -75,7 +75,7 @@
               </label>
               <div class="row">
                 <div class="col-md-12">
-                  <input type="date" id="fechaNacimientoId" class="form-control">
+                  <input type="date" id="fechaNacimientoId" class="form-control" formControlName="fechaNacimiento">
                 </div>
               </div>
             </div>
@@ -85,9 +85,9 @@
               <label for="paisId">
                 Pais
               </label>
-              <select id="paisId" class="form-control">
-                <option selected disabled>Seleccionar Pais</option>
-                <option>Mexico</option>
+              <select id="paisId" class="form-control" formControlName="pais">
+                <option value="" selected disabled>Seleccionar Pais</option>
+                <option *ngFor="let pais of apiPaises" value="{{pais.id}}">{{pais.nombre}}</option>
               </select>
             </div>
             <div class="col-md-4">
@@ -95,8 +95,8 @@
                 Estado
               </label>
               <select id="estadoId" class="form-control">
-                <option selected disabled>Seleccionar Estado</option>
-                <option>Aguascalientes</option>
+                <option value="" selected disabled>Seleccionar Estado</option>
+                <option *ngFor="let estado of apiEstados" value="{{estado.id}}">{{estado.nombre}}</option>
               </select>
             </div>
             <div class="col-md-4">
@@ -130,13 +130,13 @@
                   <input type="number" id="numeroExteriorId" class="form-control" placeholder="Enter Numero Exterior">
                 </div>
                 <div class="col-md-4">
-                  <label for="numeroExteriorId">
+                  <label for="numeroInteriorId">
                     Numero Interior
                   </label>
-                  <input type="number" id="numeroExteriorId" class="form-control" placeholder="Enter Numero Interior">
+                  <input type="number" id="numeroInteriorId" class="form-control" placeholder="Enter Numero Interior">
                 </div>
                 <div class="col-md-4">
-                  <label for="numeroExteriorId">
+                  <label for="cpId">
                     C.P.
                   </label>
                   <input type="number" id="cpId" class="form-control" placeholder="Enter C.P.">
@@ -152,7 +152,7 @@
             <div class="col-md-8">
               <div class="row">
                 <div class="col-md-6">
-                  <button type="button" class="btn btn-success">Registrar</button>
+                  <button type="button" class="btn btn-success" (click)="Registar()">Registrar</button>
                 </div>
                 <div class="col-md-6">
                   <button type="button" class="btn btn-danger">Cancelar</button>
