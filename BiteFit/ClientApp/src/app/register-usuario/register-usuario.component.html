@@ -94,7 +94,7 @@
               <label for="estadoId">
                 Estado
               </label>
-              <select id="estadoId" class="form-control">
+              <select id="estadoId" class="form-control" formControlName="estado">
                 <option value="" selected disabled>Seleccionar Estado</option>
                 <option *ngFor="let estado of apiEstados" value="{{estado.id}}">{{estado.nombre}}</option>
               </select>
@@ -103,7 +103,7 @@
               <label for="municipioId">
                 Municipio
               </label>
-              <input type="text" id="municipioId" class="form-control" placeholder="Enter Municipio">
+              <input type="text" id="municipioId" class="form-control" placeholder="Enter Municipio" formControlName="municipio">
             </div>
           </div>
           <div class="row">
@@ -111,13 +111,13 @@
               <label for="fraccionamientoID">
                 Fraccionamiento
               </label>
-              <input type="text" id="fraccionamientoID" class="form-control" placeholder="Enter Fraccionamiento">
+              <input type="text" id="fraccionamientoID" class="form-control" placeholder="Enter Fraccionamiento" formControlName="fraccionamiento">
             </div>
             <div class="col-md-6">
               <label for="calleId">
                 Calle
               </label>
-              <input type="text" id="calleId" class="form-control" placeholder="Enter Calle">
+              <input type="text" id="calleId" class="form-control" placeholder="Enter Calle" formControlName="calle">
             </div>
           </div>
           <div class="row form-group">
@@ -127,19 +127,19 @@
                   <label for="numeroExteriorId">
                     Numero Exterior
                   </label>
-                  <input type="number" id="numeroExteriorId" class="form-control" placeholder="Enter Numero Exterior">
+                  <input type="number" id="numeroExteriorId" class="form-control" placeholder="Enter Numero Exterior" formControlName="numeroExterior">
                 </div>
                 <div class="col-md-4">
                   <label for="numeroInteriorId">
                     Numero Interior
                   </label>
-                  <input type="number" id="numeroInteriorId" class="form-control" placeholder="Enter Numero Interior">
+                  <input type="number" id="numeroInteriorId" class="form-control" placeholder="Enter Numero Interior" formControlName="numeroInterior">
                 </div>
                 <div class="col-md-4">
                   <label for="cpId">
                     C.P.
                   </label>
-                  <input type="number" id="cpId" class="form-control" placeholder="Enter C.P.">
+                  <input type="number" id="cpId" class="form-control" placeholder="Enter C.P." formControlName="cp">
                 </div>
               </div>
             </div>

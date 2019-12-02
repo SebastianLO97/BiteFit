@@ -26,7 +26,13 @@ namespace BiteFit.Controllers
                     return estadoDb.GetEstados();
                 default: return null;
             }
-            
+
+        } 
+        [HttpPost]
+        public void PostRegisterUser([FromBody]User user)
+        {
+            var registerUser = new RegisterUser();
+            registerUser.RegisterUsers(user);
         }
     }
 }
