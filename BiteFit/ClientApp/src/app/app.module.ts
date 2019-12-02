@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { RegisterUsuarioComponent } from './register-usuario/register-usuario.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 @NgModule({
     declarations: [
@@ -17,7 +17,6 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     ],
     imports: [
         BrowserModule,
-        AngularFontAwesomeModule,
         AppRoutingModule,
         RouterModule.forRoot([
             { path: '', component: LoginComponent, pathMatch: 'full' },
