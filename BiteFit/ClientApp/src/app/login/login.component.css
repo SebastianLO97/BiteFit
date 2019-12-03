@@ -560,14 +560,6 @@ iframe {
   }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
-  -webkit-transition-delay: 9999s;
-}
-
 @media screen and (min-width: 1199.98px) and (max-width: 1499px) {
   #llogin {
     -ms-flex: 0 0 41.666667% !important;

@@ -6,14 +6,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { RegisterUsuarioComponent } from './register-usuario/register-usuario.component';
-<<<<<<< HEAD
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-=======
-
->>>>>>> Bite-Fit5
 
 @NgModule({
     declarations: [

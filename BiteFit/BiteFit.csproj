@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\login\Models\Login.ts" />
     <None Remove="ClientApp\src\app\register-usuario\Models\Estado.ts" />
     <None Remove="ClientApp\src\app\register-usuario\Models\Pais.ts" />
     <None Remove="ClientApp\src\app\register-usuario\Models\Register.ts" />
