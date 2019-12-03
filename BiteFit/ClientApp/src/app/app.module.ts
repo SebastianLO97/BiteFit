@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { HomeComponent } from './home/home.component';
         LoginComponent,
         RegisterUsuarioComponent,
         HomeComponent,
+        InfoComponent,
         
     ],
     imports: [
@@ -30,6 +32,7 @@ import { HomeComponent } from './home/home.component';
             { path: 'login', component: LoginComponent },
             { path: 'register-usuario', component: RegisterUsuarioComponent },
             { path: 'Home', component: HomeComponent },
+            { path: 'Info', component: InfoComponent },
         ])
     ],
     providers: [],
