@@ -9,7 +9,16 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+    redirigir() {
+        document.getElementById("divQueHacemos").scrollIntoView(true); 
+    }
+    redirigir1() {
+        document.getElementById("divArticulos").scrollIntoView(true);
+    }
+
+    ngOnInit() {
+
+       
   }
 
 }
