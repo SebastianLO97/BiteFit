@@ -12,8 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { InfoComponent } from './info/info.component';
 import { HomeComponent } from './home/home.component';
 
->>>>>>> Bite-Fit5
-
 @NgModule({
     declarations: [
         AppComponent,
