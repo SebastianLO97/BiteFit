@@ -15,20 +15,18 @@ export class LoginComponent implements OnInit {
     formGroup: FormGroup;
 
     login: Login;
-    apiUsers: Login[];
-    existe: number;
+    existe: number = 0;
 
     Login() {
         this.login = new Login;
         this.login.username = this.formGroup.controls['username'].value;
         this.login.password = this.formGroup.controls['password'].value;
         console.log(this.login);
-        console.log(this.apiUsers);
         this._httpService.post('/api/Login/', this.login).subscribe(existe => {
             this.existe = existe.json() as number;
         });
         if (this.existe == 1) {
-            console.log("Works");
+            window.location.href = "/home";
         } else {
             console.log("No Works");
         }
@@ -43,9 +41,6 @@ export class LoginComponent implements OnInit {
             username: [''],
             password: [''],
         });
-        //this._httpService.get('/api/Login').subscribe(users => {
-        //    this.apiUsers = users.json() as Login[];
-        //});
     }
 
 }

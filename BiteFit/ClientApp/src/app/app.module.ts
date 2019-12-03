@@ -11,6 +11,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { InfoComponent } from './info/info.component';
 import { HomeComponent } from './home/home.component';
+import { DietaComponent } from './dieta/dieta.component';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { HomeComponent } from './home/home.component';
         RegisterUsuarioComponent,
         HomeComponent,
         InfoComponent,
+        DietaComponent,
         
     ],
     imports: [
@@ -31,8 +33,9 @@ import { HomeComponent } from './home/home.component';
             { path: '', component: LoginComponent, pathMatch: 'full' },
             { path: 'login', component: LoginComponent },
             { path: 'register-usuario', component: RegisterUsuarioComponent },
-            { path: 'Home', component: HomeComponent },
-            { path: 'Info', component: InfoComponent },
+            { path: 'home', component: HomeComponent },
+            { path: 'info', component: InfoComponent },
+            { path: 'dieta', component: DietaComponent },
         ])
     ],
     providers: [],

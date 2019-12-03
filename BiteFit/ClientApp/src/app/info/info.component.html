@@ -8,13 +8,13 @@
               <label for="pesoId">
                 Peso
               </label>
-              <input type="text" id="pesoId" class="form-control" placeholder="Enter Peso" formControlName="Peso">
+              <input type="number" step="0.1" id="pesoId" class="form-control" placeholder="Enter Peso" formControlName="peso">
             </div>
             <div class="col-md-6">
               <label for="alturaId">
-                altura
+                Altura
               </label>
-              <input type="text" id="alturaId" class="form-control" placeholder="Enter altura" formControlName="altura">
+              <input type="number" step="0.1" id="alturaId" class="form-control" placeholder="Enter Altura" formControlName="altura">
             </div>
           </div>
           <div class="row">
@@ -22,13 +22,13 @@
               <label for="grasaId">
                 %Grasa
               </label>
-              <input type="text" id="grasaId" class="form-control" placeholder="Enter %grasa" formControlName="grasa">
+              <input type="number" step="0.1" id="grasaId" class="form-control" placeholder="Enter %Grasa" formControlName="grasa">
             </div>
             <div class="col-md-6">
               <label for="aguaId">
-               %AGUA
+                %Agua
               </label>
-              <input type="text" id="aguaId" class="form-control" placeholder="Enter %agua">
+              <input type="number" step="0.1" id="aguaId" class="form-control" placeholder="Enter %Agua" formControlName="agua">
             </div>
           </div>
           <div class="row">
@@ -36,45 +36,57 @@
               <label for="imcId">
                 IMC
               </label>
-              <input type="text" id="imcId" class="form-control" placeholder="Enter IMC" formControlName="imc">
+              <input type="number" step="0.1" id="imcId" class="form-control" placeholder="Enter IMC" formControlName="imc">
             </div>
             <div class="col-md-4">
               <label for="kgId">
-                masa en kg
+                Masa En Kg
               </label>
-              <input type="text" id="kgId" class="form-control" placeholder="Enter Masa en Kg" formControlName="kg">
+              <input type="number" step="0.1" id="kgId" class="form-control" placeholder="Enter Masa En Kg" formControlName="kg">
             </div>
             <div class="col-md-4">
               <label for="kcalId">
-                kcal
+                Kcal
               </label>
-              <input type="text" id="kaclId" class="form-control" placeholder="Enter kcal" formControlName="kacl">
+              <input type="number" step="0.1" id="kaclId" class="form-control" placeholder="Enter Kcal" formControlName="kacl">
             </div>
           </div>
-     
+
           <div class="row">
             <div class="col-md-4">
               <label for="paisId">
                 Meta:
               </label>
               <select id="paisId" class="form-control" formControlName="metas">
-                <option value="" selected disabled>Seleccionar meta</option>
-                <option>quemar grasa</option>
-                <option>ganar musculo </option>
-                <option>bajar de peso</option>
-                <option>mantenerme</option>
+                <option value="" selected disabled>Seleccionar Meta</option>
+                <option value="1">Bajar De Peso</option>
+                <option value="2">Quemar Grasa</option>
+                <option value="3">Ganar Musculo </option>
+                <option value="4">Mantener</option>
               </select>
             </div>
             <div class="col-md-4">
-              <!--<label for="estadoId">
-                Estado
-              </label>
-              <select id="estadoId" class="form-control">
-                <option value="" selected disabled>Seleccionar Estado</option>
-                <option *ngFor="let estado of apiEstados" value="{{estado.id}}">{{estado.nombre}}</option>
-              </select>-->
             </div>
             <div class="col-md-4">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8">
+                  <div class="row">
+                    <button type="button" class="btn btn-success" (click)="ObtenerDieta()">Obtener Dieta Y Ejercicios</button>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
             </div>
           </div>
         </div>
