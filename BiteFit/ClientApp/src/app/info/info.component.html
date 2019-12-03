@@ -1,0 +1,85 @@
+<body>
+  <div class="container-fluid">
+    <form role="form" [formGroup]="formGroup" novalidate>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="pesoId">
+                Peso
+              </label>
+              <input type="text" id="pesoId" class="form-control" placeholder="Enter Peso" formControlName="Peso">
+            </div>
+            <div class="col-md-6">
+              <label for="alturaId">
+                altura
+              </label>
+              <input type="text" id="alturaId" class="form-control" placeholder="Enter altura" formControlName="altura">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="grasaId">
+                %Grasa
+              </label>
+              <input type="text" id="grasaId" class="form-control" placeholder="Enter %grasa" formControlName="grasa">
+            </div>
+            <div class="col-md-6">
+              <label for="aguaId">
+               %AGUA
+              </label>
+              <input type="text" id="aguaId" class="form-control" placeholder="Enter %agua">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="imcId">
+                IMC
+              </label>
+              <input type="text" id="imcId" class="form-control" placeholder="Enter IMC" formControlName="imc">
+            </div>
+            <div class="col-md-4">
+              <label for="kgId">
+                masa en kg
+              </label>
+              <input type="text" id="kgId" class="form-control" placeholder="Enter Masa en Kg" formControlName="kg">
+            </div>
+            <div class="col-md-4">
+              <label for="kcalId">
+                kcal
+              </label>
+              <input type="text" id="kaclId" class="form-control" placeholder="Enter kcal" formControlName="kacl">
+            </div>
+          </div>
+     
+          <div class="row">
+            <div class="col-md-4">
+              <label for="paisId">
+                Meta:
+              </label>
+              <select id="paisId" class="form-control" formControlName="metas">
+                <option value="" selected disabled>Seleccionar meta</option>
+                <option>quemar grasa</option>
+                <option>ganar musculo </option>
+                <option>bajar de peso</option>
+                <option>mantenerme</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <!--<label for="estadoId">
+                Estado
+              </label>
+              <select id="estadoId" class="form-control">
+                <option value="" selected disabled>Seleccionar Estado</option>
+                <option *ngFor="let estado of apiEstados" value="{{estado.id}}">{{estado.nombre}}</option>
+              </select>-->
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
